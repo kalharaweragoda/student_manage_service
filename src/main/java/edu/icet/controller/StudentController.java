@@ -15,6 +15,7 @@ public class StudentController {
 
     final StudentService service;
 
+    //http://localhost:8080/student/add
     @PostMapping("/add")
     public void addStudent(@RequestBody Student student){
         service.addStudent(student);
