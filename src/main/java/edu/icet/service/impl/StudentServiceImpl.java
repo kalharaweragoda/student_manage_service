@@ -50,5 +50,17 @@ public class StudentServiceImpl implements StudentService {
         return mapper.map(repository.findById(id), Student.class);
     }
 
+    @Override
+    public List<Student> searchByName(String name) {
+        List<StudentEntity> byName = repository.findByName(name);
+        List<Student> studentList = new ArrayList<>();
+
+        byName.forEach(studentEntity ->  {
+            studentList.add(mapper.map(studentEntity, Student.class));
+        });
+        return studentList;
+
+    }
+
 
 }

@@ -16,4 +16,6 @@ public interface StudentService {
     void updateStudent(Student student);
 
     Student searchById(Integer id);
+
+    List<Student> searchByName(String name);
 }
