@@ -45,5 +45,10 @@ public class StudentServiceImpl implements StudentService {
         repository.save(mapper.map(student,StudentEntity.class));
     }
 
+    @Override
+    public Student searchById(Integer id) {
+        return mapper.map(repository.findById(id), Student.class);
+    }
+
 
 }

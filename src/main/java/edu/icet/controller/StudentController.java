@@ -39,4 +39,9 @@ public class StudentController {
         service.updateStudent(student);
     }
 
+    @GetMapping("/search-by-id/{id}")
+    public Student searchById(@PathVariable Integer id){
+        return service.searchById(id);
+    }
+
 }
