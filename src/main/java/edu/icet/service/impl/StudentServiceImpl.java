@@ -40,5 +40,10 @@ public class StudentServiceImpl implements StudentService {
         repository.deleteById(id);
     }
 
+    @Override
+    public void updateStudent(Student student) {
+        repository.save(mapper.map(student,StudentEntity.class));
+    }
+
 
 }

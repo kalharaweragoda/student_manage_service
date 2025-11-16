@@ -12,4 +12,6 @@ public interface StudentService {
     List<Student> getAll();
 
     void deleteStudent(Integer id);
+
+    void updateStudent(Student student);
 }
